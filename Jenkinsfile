@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Say Hello') {
       steps {
-        echo "Hello ${params.Name}"
+        echo "Hello ${MY_NAME}"
       }
     }
     stage('Testing') {
@@ -32,8 +32,5 @@ pipeline {
   }
   environment {
     MY_NAME = 'Chris'
-  }
-  parameters {
-    string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
 }
